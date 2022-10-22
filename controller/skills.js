@@ -39,16 +39,15 @@ function newSkill (req, res) {
 }
 
 function show (req, res) {
-    console.log('banana', req.params.id)
   res.render('skills/show', {
-    skills: Skill.getOne(req.params.id),
-    title: 'Skill Details'
+    skill: Skill.getOne(req.params.id),
+    title: 'Skill Detail'
   });
 }
 
 function index(req, res) {
     res.render('skills/index', {
       skills: Skill.getAll(),
-      title: 'All skills'
+      title: 'All Skills'
     });
   }
